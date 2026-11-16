@@ -37,6 +37,6 @@ if(IS_NEW) {
     `);
 }
 
-//test
+
 
 export { db }
