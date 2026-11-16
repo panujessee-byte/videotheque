@@ -1,18 +1,18 @@
-<li class="film" data-id="{{id_film}}" data-vu="{{est_vu}}">
+<li class="film" data-id-film="{{this.id_film}}" data-vu="{{this.est_vu}}">
     <div class="film-info">
-        <h3>{{titre}}</h3>
-        <p>{{genre}} - {{annee}} - Note : {{note}}/5</p>
+        <h3>{{this.titre}}</h3>
+        <p>{{this.genre}} - {{this.annee}} - Note : {{this.note}}/5</p>
     </div>
 
     <div class="film-actions">
-        {{#if est_vu}}
+        {{#if this.est_vu}}
             <span class="film-etat">Vu</span>
-            <button type="button" class="film-vu">Marquer comme pas vu</button>
+            <button type="button" class="film-vu" data-id-film="{{this.id_film}}">Marquer comme pas vu</button>
         {{else}}
             <span class="film-etat">Pas vu</span>
-            <button type="button" class="film-vu">Marquer comme vu</button>
+            <button type="button" class="film-vu" data-id-film="{{this.id_film}}">Marquer comme vu</button>
         {{/if}}
 
-        <button type="button" class="film-supprimer">Supprimer</button>
+        <button type="button" class="film-supprimer" data-id-film="{{this.id_film}}">Supprimer</button>
     </div>
 </li>

@@ -1,49 +1,29 @@
-* {
-    box-sizing: border-box;
+/* Styles spécifiques à la page d'accueil */
+
+/* Formulaire d'ajout : les champs et le bouton sont sur une seule ligne */
+#form-film {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr auto;
+    gap: .75rem;
+    align-items: start;
 }
 
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #222;
-    background-color: #f3f4f6;
+#form-film button {
+    /* Aligne le bouton avec les champs (sous la hauteur des étiquettes) */
+    margin-top: 1.4rem;
 }
 
-header {
-    padding: 1.5rem 1rem;
-    color: #fff;
-    background-color: #1f2a44;
-    text-align: center;
-}
+/* Sur un petit écran, on revient à un champ par ligne */
+@media (max-width: 600px) {
+    #form-film {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
 
-header h1 {
-    margin: 0 0 .5rem 0;
-}
-
-header p {
-    margin: 0;
-}
-
-main {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-section {
-    margin-bottom: 1.5rem;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 8px;
-}
-
-h2 {
-    margin-top: 0;
-}
-
-/* Formulaire d'ajout */
-.champ {
-    margin-bottom: .75rem;
+    #form-film button {
+        margin-top: 0;
+        justify-self: start;
+    }
 }
 
 .champ label {
@@ -64,20 +44,6 @@ h2 {
     min-height: 1.2rem;
     color: #b00020;
     font-size: .9rem;
-}
-
-button {
-    padding: .5rem 1rem;
-    border: none;
-    border-radius: 4px;
-    color: #fff;
-    background-color: #1f2a44;
-    font-size: 1rem;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #33426b;
 }
 
 /* Liste des films */

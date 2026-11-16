@@ -59,4 +59,5 @@ Les données sont envoyées en JSON dans le corps de la requête. Si une donnée
 - `views/` : les vues Handlebars (layout, page d'accueil et partials);
 - `public/js/main.js` : le code client (fetch);
 - `public/js/validation.js` : les fonctions de validation réutilisables;
-- `public/css/style.css` : les styles de la page.
+- `public/css/global.css` : les styles communs à toutes les pages;
+- `public/css/home.css` : les styles spécifiques à la page d'accueil.

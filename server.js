@@ -37,9 +37,9 @@ app.use(express.static('public'));
 app.get('/', async (request, response) => {
     const films = await getFilms();
 
-    response.status(200).render('home', {
+    response.render('home', {
         title: 'Vidéothèque',
-        styles: ['/css/style.css'],
+        styles: ['/css/home.css'],
         scripts: ['/js/main.js'],
         films: films
     });
